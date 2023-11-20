@@ -1,7 +1,6 @@
-#
-#   Hello World client in Python
+#   Random number generator array request client written in Python
 #   Connects REQ socket to tcp://localhost:5555
-#   Sends "Hello" to server, expects "World" back
+#   Sends "Hello" to server, expects an array of random numbers back
 #
 
 import zmq
