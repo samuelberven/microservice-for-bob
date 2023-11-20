@@ -1,6 +1,6 @@
 #   Random number generator array request client written in Python
 #   Connects REQ socket to tcp://localhost:5555
-#   Sends "Hello" to server, expects an array of random numbers back
+#   Sends a stringified int to server, expects a stringified array of random numbers back
 #
 
 import zmq
@@ -15,7 +15,7 @@ socket.connect("tcp://localhost:5555")
 #  Do 10 requests, waiting each time for a response
 for request in range(1):
     print(f"Sending request {request} ...")
-    socket.send_string("Hello")
+    socket.send_string("10")
 
     #  Get the reply.
     message = socket.recv()

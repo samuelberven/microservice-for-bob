@@ -1,6 +1,6 @@
 #   Random number generator array server written in Python
 #   Binds REP socket to tcp://*:5555
-#   Expects b"Hello" from client, replies with b"{array of random numbers}"
+#   Expects a stringified int from client, replies with b"{array of random numbers}"
 #
 
 import time
@@ -16,13 +16,8 @@ while True:
     message = socket.recv()
     print(f"Received request: {message}. Calculating values, please wait.")
 
-
-    # Can be used for variable input
-    # numberOfVals = int(input("How many random numbers? "))
-    # rangeLower = int(input("What's the lower range? "))
-    # rangeHigher = int(input("What's the higher range? "))
-
-    numberOfVals = 10
+    # numberOfVals = 10
+    numberOfVals = int(message)
     rangeLower = 1
     rangeHigher = 100
 
@@ -38,5 +33,4 @@ while True:
 
 
     #  Send reply back to client
-    # socket.send_string("World")
     socket.send_string(str(randomNumbers))
