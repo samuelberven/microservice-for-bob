@@ -16,14 +16,28 @@ How to Install:
 How to Run:
     Run server.py
     Run client.py
-        Use client.py to pass the number of random numbers requested in the form of a stringified int, 
+        Use client.py to pass json object containing an array with the following three values: 
+            - number of random numbers to return, 
+            - value lower limit (optional, default=1),
+            - upper limit (optional, default=100);
+        Expects back b"{array of random numbers}" json object (which fits the requested parameters)
         Example of request:
-            socket.send_string("10")
-        server.py converts received string to an int, generates that number of random numbers, 
-        adds each one to an array, and then sends that array as a string to client.py
+            ...
+            request_details = [num_vals, lower_limit, upper_limit + 1]
+            request_data = json.dumps(request_details)
+            socket.send_string(request_data)
+        server.py loads json data and generates the number of random numbers (between the upper and 
+        lower limits) requested, sending them as an array in a json object to client.py
         Example of returned string:
-            Received reply 0 [ b'[4, 72, 15, 42, 72, 96, 9, 50, 40, 15]' ]
+            Received reply [ [26, 44, 74, 49, 76, 37, 91, 84, 100, 47] ]
 ******************************************
 
 # UML
-![UML Sequence Diagram](./UML.drawio.png)
+
+
+
+
+![alt text](http://url/to/img.png)
+
+
+![UML Sequence Diagram](./bob-microservce-uml.drawio.png)
