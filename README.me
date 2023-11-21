@@ -1,6 +1,8 @@
 Microservice for Bob
 ******************************************
-Takes a stringified int and returns that number of random numbers as a stringified array. 
+Uses ZeroMQ to communicate between server and client .py files.
+Client file sends a stringified int as a request. 
+Server file receives request and returns that number of random numbers as a stringified array.
 ******************************************
 #TODO:
     -Add function challenges
@@ -13,9 +15,15 @@ How to Install:
 ******************************************
 How to Run:
     Run server.py
-        Pass the number of random numbers requested in the form of a stringified int, such as:
-            socket.send_string("10")
     Run client.py
-        This will return a string that includes text and the 10 random numbers. An example: 
+        Use client.py to pass the number of random numbers requested in the form of a stringified int, 
+        Example of request:
+            socket.send_string("10")
+        server.py converts received string to an int, generates that number of random numbers, 
+        adds each one to an array, and then sends that array as a string to client.py
+        Example of returned string:
             Received reply 0 [ b'[4, 72, 15, 42, 72, 96, 9, 50, 40, 15]' ]
 ******************************************
+
+# UML
+![UML Sequence Diagram](./UML.drawio.png)
