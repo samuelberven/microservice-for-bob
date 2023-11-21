@@ -30,9 +30,9 @@ while True:
     for cycle in range(numberOfVals):
         randomNumbers.append(random.randrange(rangeLower, rangeHigher))
 
-    # Ordinarily 1 second; it's just set longer here for the demonstration video
-    time.sleep(3)
-    # time.sleep(1)
+    # Ordinarily 1 second; it's just set to 3 seconds for the demonstration video
+    # time.sleep(3)
+    time.sleep(1)
 
     # Converts array of random numbers to json object
     response_data = json.dumps(randomNumbers)
