@@ -43,7 +43,13 @@ The **client** sends a JSON object with the following array:
     ```
 2. Server Response:
 The <span style="color: #E67E22;">server</span> generates the specified number of random integers and sends them back in a <span style="color: #9B59B6;">JSON object</span>:
-   <div style="background-color: #9B59B6; color: white; padding: 10px; border-radius: 4px;"> ```json { "random_numbers": [26, 44, 74, 49] } ``` </div>
+   <div style="background-color: #9B59B6; color: white; padding: 10px; border-radius: 4px;">
+   ```json
+    {
+      "random_numbers": [26, 44, 74, 49]
+    }   
+   ```
+   </div>
 
 
 ### Request Details:
