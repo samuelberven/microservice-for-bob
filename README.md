@@ -11,11 +11,11 @@ To get started with the project, follow these installation steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/samuelberven/random_number_python_microservice.git
+   git clone https://github.com/samuelberven/random-number-python-microservice.git
 
 2. **Navigate** into the project directory:
    ```bash
-    cd random_number_python_microservice
+    cd random-number-python-microservice
     ```
 
 3. **Install** dependencies:
