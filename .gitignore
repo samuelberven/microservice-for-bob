@@ -1,0 +1,8 @@
+# Bytecode and cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE/editor specific files
+.vscode/
+
