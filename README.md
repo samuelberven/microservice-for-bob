@@ -1,28 +1,24 @@
-# Random Number Generator Microservice
+# <span style="color: #2C3E50;">Random Number Generator Microservice</span>
+A simple microservice built with <span style="color: #27AE60;">ZeroMQ</span> to communicate between a client and server. The client sends a request (in the form of a stringified integer) to the server, which responds with a JSON array containing a specified number of random integers.
 
-A simple microservice built with **ZeroMQ** to communicate between a client and server. The client sends a request (in the form of a stringified integer) to the server, which responds with a JSON array containing a specified number of random integers.
+## <span style="color: #E67E22;">Features</span>
+- <span style="color: #3498DB;">ZeroMQ Communication</span>: The server and client communicate over ZeroMQ using socket-based messaging.
+- <span style="color: #3498DB;">Random Number Generation</span>: The server generates a list of random integers based on the client’s request.
+- <span style="color: #3498DB;">Customizable Parameters</span>: Clients can specify the number of random numbers, as well as optional upper and lower bounds for the values.
 
-## Features
-
-- **ZeroMQ Communication**: The server and client communicate over ZeroMQ using socket-based messaging.
-- **Random Number Generation**: The server generates a list of random integers based on the client’s request.
-- **Customizable Parameters**: Clients can specify the number of random numbers, as well as optional upper and lower bounds for the values.
-
-## Installation
-
+## <span style="color: #E67E22;">Installation</span>
 To get started with the project, follow these installation steps:
 
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/samuelberven/random_number_python_microservice.git
-    ```
 
-2. Navigate into the project directory:
+2. **Navigate** into the project directory:
    ```bash
     cd random_number_python_microservice
     ```
 
-3. Install dependencies:
+3. **Install** dependencies:
    ```bash
     pip install pyzmq
    ```
@@ -30,10 +26,12 @@ To get started with the project, follow these installation steps:
 ## How It Works
 The client sends a request containing the following information:
 
-Number of random numbers to generate.
-Lower limit (optional, default is 1).
-Upper limit (optional, default is 100).
+- <span style="color: #9B59B6;">Number of random numbers</span> to generate.
+- <span style="color: #9B59B6;">Lower limit</span> (optional, default is 1).
+- <span style="color: #9B59B6;">Upper limit</span> (optional, default is 100).
+
 The server listens for the request, generates the specified number of random integers within the given limits, and returns them as a JSON array.
+
 
 ### Example Request and Response
 1. Client Request:
@@ -44,12 +42,9 @@ The **client** sends a JSON object with the following array:
     socket.send_string(request_data)
     ```
 2. Server Response:
-The **server** generates the specified number of random integers and sends them back in a JSON object:
-   ```json
-    {
-      "random_numbers": [26, 44, 74, 49]
-    }
-   ```
+The <span style="color: #E67E22;">server</span> generates the specified number of random integers and sends them back in a <span style="color: #9B59B6;">JSON object</span>:
+   <div style="background-color: #9B59B6; color: white; padding: 10px; border-radius: 4px;"> ```json { "random_numbers": [26, 44, 74, 49] } ``` </div>
+
 
 ### Request Details:
     ```num_vals```: The number of random numbers to generate.
