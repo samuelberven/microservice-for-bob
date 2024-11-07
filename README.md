@@ -14,12 +14,12 @@ To get started with the project, follow these installation steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/bob-microservice.git
+   git clone https://github.com/samuelberven/random_number_python_microservice.git
     ```
 
 2. Navigate into the project directory:
    ```bash
-    cd bob-microservice
+    cd random_number_python_microservice
     ```
 
 3. Install dependencies:
@@ -46,7 +46,6 @@ The **client** sends a JSON object with the following array:
 2. Server Response:
 The **server** generates the specified number of random integers and sends them back in a JSON object:
    ```json
-    Copy code
     {
       "random_numbers": [26, 44, 74, 49]
     }
