@@ -54,12 +54,12 @@ The **server** generates the specified number of random integers and sends them 
    ```
 
 ### Request Details:
-    `num_vals`: The number of random numbers to generate.
-    `lower_limit`: The lower bound for the random numbers (default: 1).
-    `upper_limit`: The upper bound for the random numbers (default: 100).
+    ```num_vals```: The number of random numbers to generate.
+    ```lower_limit```: The lower bound for the random numbers (default: 1).
+    ```upper_limit```: The upper bound for the random numbers (default: 100).
 
 ### Example Flow:
-1. **Client** (`client.py`) sends a request:
+1. **Client** (```client.py```) sends a request:
 
 python
 Copy code
@@ -67,7 +67,7 @@ request_details = [10, 1, 100]
 request_data = json.dumps(request_details)
 socket.send_string(request_data)
 
-2. **Server** (`server.py`) processes the request and generates 10 random numbers between 1 and 100:
+2. **Server** (```server.py```) processes the request and generates 10 random numbers between 1 and 100:
     ```json
     {
       "random_numbers": [26, 44, 74, 49, 92, 51, 33, 81, 68, 29]
